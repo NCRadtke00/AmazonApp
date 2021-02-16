@@ -4,7 +4,8 @@ import './Product.css';
 function Product({ id, title, image, price, rating }) {
     return (
         <div className="product">
-            <p>{title}</p>
+            <div className="product__info">
+                   <p>{title}</p>
             <p className="product__price">
                 <small>$</small>
                 <strong> { price } </strong>
@@ -14,7 +15,9 @@ function Product({ id, title, image, price, rating }) {
                     <p>⭐</p>
                 ))}
             </div>
-            <img src={image} alt=""/>
+            </div>
+          
+            <img className="product__img"src={image} alt=""/>
             <button>Add to basket</button>
         </div>
     )
