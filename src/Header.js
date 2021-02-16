@@ -1,16 +1,22 @@
 import React from 'react'
+import "./Header.css";
+import { Link } from "react-router-dom";
 
 function Header() {
     return (
-        <div>
+        <nav className="header">
+          
+            <Link to="/">
+            <img className="header__logo" src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt=""/>
+            </Link>
             
+            
+      
+            <input type="text" className="header__searchInput" />
+          
+          
 
-            //////logo on left
-            //////search box
-            /////3links
-            /////basket icon with number
-            
-        </div>
+        </nav>
     )
 }
 
