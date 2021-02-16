@@ -10,7 +10,7 @@ function Home() {
             <Product 
             id="12321341" 
             title="If Animals Kissed Good Night - Board book – Illustrated" 
-            price={3.59} 
+            price={3.49} 
             rating={5} 
             image="https://images-na.ssl-images-amazon.com/images/I/51PRQuO-xjL._SY498_BO1,204,203,200_.jpg"/>
             <Product 
