@@ -13,8 +13,9 @@
 }
 .product__info {
   height: 100px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
+
 .product__price {
   margin-top: 5px;
 }
@@ -25,7 +26,6 @@
   max-height: 200px;
   width: 100%;
   object-fit: contain;
-  margin-top: 1px;
   margin-bottom: 15px;
 }
 .product > button {
