@@ -22,7 +22,6 @@ function App() {
           <Router path="/">
             <Header />
             <Home />
-      
           </Router>
         </Switch>
       </div>
