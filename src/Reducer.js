@@ -27,9 +27,26 @@ function reducer(state, action) {
             };
         case 'REMOVE_FROM_BASKET':
             //logic for removing from basket
-            return {state};
+            //cloned the basket
+            let newBasket = [...state.basket];
+
+            const index = state.basket.findIndex((basketItem) => basketItem.id === action.id);
+            
+            if(index >= 0){
+                //item exists in basket, remove it
+                newBasket.splice(index, 1);
+            } else {
+                console.warn(
+                'Can not remove product (id: ${action.id}) as it is not defined'
+                );
+            }
+            return {
+                ...state,
+                basket: newBasket,
+            };
         default:
             return state;
     }
-}
+};
+
 export default reducer;
