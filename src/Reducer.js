@@ -1,12 +1,6 @@
 export const initialState = {
-    basket: [{
-        id:"3254354345",
-        title: "Maledan Compatible with Fitbit Sense & Versa 3 Charger Replacement USB Charging Cable Dock Stand for Sense Smartwatch, 2 Pack 3.3Ft Durable Portable Charger Dock Power Cable Cord, Black/Black",
-        price: 9.99,
-        rating:4,
-        image:"https://images-na.ssl-images-amazon.com/images/I/71r6OE-WsTL._AC_SL1500_.jpg",
-    }],
-    user: null,
+    basket: [],
+    user: null
 };
 
 export const getBasketTotal = (basket) => basket?.reduce((amount, item) => item.price + amount, 0);
@@ -39,6 +33,11 @@ function reducer(state, action) {
                 ...state,
                 basket: newBasket,
             };
+        case "SET_USER":
+            return {
+                ...state,
+                user: action.user
+            }
         default:
             return state;
     }
